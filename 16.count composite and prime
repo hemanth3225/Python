@@ -1,0 +1,29 @@
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def classify_numbers(numbers):
+    prime_count = 0
+    composite_count = 0
+    
+    for number in numbers:
+        if is_prime(number):
+            prime_count += 1
+        elif number > 1:
+            composite_count += 1
+    
+    return prime_count, composite_count
+
+# Example usage
+input_numbers = input("Enter the numbers: ").split()
+numbers = [int(num) for num in input_numbers]
+
+prime_count, composite_count = classify_numbers(numbers)
+
+print(f"Composite number: {composite_count}")
+print(f"Prime number: {prime_count}")
+                                                                   
