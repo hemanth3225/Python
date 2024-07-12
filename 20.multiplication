@@ -1,0 +1,11 @@
+def multiplication_table(M, N):
+    for i in range(1, N + 1):
+        result = i * M
+        print(f"{i}x{M}={result}")
+
+# Example usage
+M = 4
+N = 5
+
+multiplication_table(M, N)
+                                        
