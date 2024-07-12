@@ -1,0 +1,23 @@
+def sort_names(names, order):
+    if order.upper() == 'A':
+        return sorted(names)
+    elif order.upper() == 'D':
+        return sorted(names, reverse=True)
+    else:
+        return None
+
+def main():
+    input_names = input("Enter names separated by commas: ")
+    names = [name.strip() for name in input_names.split(',')]
+    order = input("Order(A/D): ")
+
+    sorted_names = sort_names(names, order)
+    
+    if sorted_names is not None:
+        print("Sorted names:", " ".join(sorted_names))
+    else:
+        print("Invalid order. Please enter 'A' for ascending or 'D' for descending.")
+
+if __name__ == "__main__":
+    main()
+                                                                                                    
